@@ -4,19 +4,17 @@ AOS.init();
 const loading = document.querySelector(".loading");
 window.addEventListener("load", () => {
     loading.style.cssText = "opacity:0; z-index:-1;";
-});
 
-// song button ======================================
-const audioButton = document.querySelector(".audio-btn"),
-    puse = document.querySelector("#puse");
-
-window.onload = () => {
     let backMusic = document.createElement("div");
     backMusic.className = "background-music"
     document.body.appendChild(backMusic);
     backMusic.innerHTML =
         "<audio id='music' data-custem autoplay loop src='audio/Art of Silence.mp3'></audio>";
-}
+});
+
+// song button ======================================
+const audioButton = document.querySelector(".audio-btn"),
+    puse = document.querySelector("#puse");
 
 localSave = localStorage.getItem("icon-music");
 if (localSave && localSave === "puse-act") {
