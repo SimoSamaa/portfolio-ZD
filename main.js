@@ -4,7 +4,9 @@ AOS.init();
 const loading = document.querySelector(".loading");
 window.addEventListener("load", () => {
     loading.style.cssText = "opacity:0; z-index:-1;";
-
+    
+    let music = document.querySelector("#music");
+    
     let backMusic = document.createElement("div");
     backMusic.className = "background-music"
     document.body.appendChild(backMusic);
@@ -20,8 +22,6 @@ localSave = localStorage.getItem("icon-music");
 if (localSave && localSave === "puse-act") {
     puse.classList.toggle("puse-act");
 };
-
-let music = document.querySelector("#music");
 
 audioButton.addEventListener("click", () => {
     puse.classList.toggle("puse-act")
