@@ -1,5 +1,11 @@
 AOS.init();
 
+// loading =======================
+const loading = document.querySelector(".loading");
+window.addEventListener("load", () => {
+    loading.style.cssText = "opacity:0; z-index:-1;";
+});
+
 // song button ======================================
 const audioButton = document.querySelector(".audio-btn"),
     puse = document.querySelector("#puse");
@@ -187,9 +193,8 @@ sliderBox.forEach(sliderImg => {
         };
 
         // cocial media light box
-        lightBoxHeadersocialMedia.onclick = function (e) {
+        function socialMediaToggle(e) {
             if (e.target != e.currentTarget) return;
-            lightBoxHeadersocialMediaContainer.classList.toggle("show");
             lightBoxHeadersocialMediaInsta.innerHTML =
                 "<a href='https://www.instagram.com/accounts/login/?next=/zd_ar.t/' target='_blanck'><i class='fa-brands fa-instagram'></i> instagram</a>";
             lightBoxHeadersocialMediaArt.innerHTML =
@@ -197,6 +202,30 @@ sliderBox.forEach(sliderImg => {
             lightBoxHeadersocialMediaBeha.innerHTML =
                 "<a href='https://www.behance.net/ZDART/projects' target='_blanck'><i class='fa-brands fa-behance'></i> behance</a>";
         };
+        lightBoxHeadersocialMedia.addEventListener("click", socialMediaToggle);
+
+        open = () => {
+            lightBoxHeadersocialMedia.classList.add("show-act");
+            lightBoxHeadersocialMediaContainer.classList.add("show");
+        };
+
+        close = () => {
+            lightBoxHeadersocialMedia.classList.remove("show-act")
+            lightBoxHeadersocialMediaContainer.classList.remove("show");
+        };
+
+        lightBoxHeadersocialMedia.onclick = () => {
+            if (!lightBoxHeadersocialMediaContainer.classList.contains("show")) {
+                open();
+            } else close();
+        };
+
+        document.body.onclick = (e) => {
+            a = lightBoxHeadersocialMedia.contains(e.target);
+            b = lightBoxHeadersocialMediaContainer.contains(e.target);
+            !a && !b ? close() : "(--)";
+        };
+
         // inner img html to js light box
         lightBoxImg.src = sliderImg.src;
         lightBoxImg.setAttribute("loading", "lazy");

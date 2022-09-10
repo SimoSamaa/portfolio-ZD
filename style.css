@@ -14,6 +14,7 @@ html :is(*, *::before, *::after) {
     outline: none;
     line-height: 1.5;
     color: var(--clr-gray);
+    user-select: none;
 }
 
 html {
@@ -615,6 +616,87 @@ section:not(#sec-skills) {
     to {
         opacity: 0;
         top: 50px;
+    }
+}
+
+/* loading */
+.loading {
+    position: fixed;
+    inset: 0;
+    background-color: var(--body-clr);
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    transition: --tra;
+    -webkit-transition: var(--tran2);
+    -moz-transition: --tra;
+    -ms-transition: --tra;
+    -o-transition: --tra;
+}
+
+.loading-content {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: text-opacity 1s linear infinite alternate;
+    -webkit-animation: text-opacity 1s linear infinite alternate;
+    letter-spacing: 2px;
+    font-size: large;
+}
+
+@keyframes text-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+.loading-clr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    mix-blend-mode: lighten;
+    animation: rotate var(--duration) var(--timing) infinite;
+    -webkit-animation: rotate var(--duration) var(--timing) infinite;
+}
+
+.loading-red {
+    border-top: 10px solid lightcoral;
+    --duration: 1.5s;
+    --timing: ease-in-out;
+}
+
+.loading-green {
+    border-left: 10px solid lightgreen;
+    --duration: 2S;
+    --timing: ease-in;
+}
+
+.loading-blue {
+    border-right: 10px solid lightblue;
+    --duration: 2.5s;
+    --timing: ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
     }
 }
 
