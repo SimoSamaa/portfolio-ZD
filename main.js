@@ -10,11 +10,13 @@ window.addEventListener("load", () => {
 const audioButton = document.querySelector(".audio-btn"),
     puse = document.querySelector("#puse");
 
-let backMusic = document.createElement("div");
-backMusic.className = "background-music"
-document.body.appendChild(backMusic);
-backMusic.innerHTML =
-    "<audio id='music' data-custem autoplay loop src='audio/Art of Silence.mp3'></audio>";
+window.onload = () => {
+    let backMusic = document.createElement("div");
+    backMusic.className = "background-music"
+    document.body.appendChild(backMusic);
+    backMusic.innerHTML =
+        "<audio id='music' data-custem autoplay loop src='audio/Art of Silence.mp3'></audio>";
+}
 
 localSave = localStorage.getItem("icon-music");
 if (localSave && localSave === "puse-act") {
