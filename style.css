@@ -357,23 +357,23 @@ section:not(#sec-skills) {
     z-index: -1;
 }
 
-@media(hover: hover) {
-    .btn-1:hover {
-        color: var(--white);
-        border-color: var(--white);
-    }
 
-    .btn-1::after {
-        content: "";
-        inset: 0 0 auto auto;
-    }
-
-    .btn-1:hover::before,
-    .btn-1:hover::after {
-        width: 50%;
-        background: #5B63B7;
-    }
+.btn-1:hover {
+    color: var(--white);
+    border-color: var(--white);
 }
+
+.btn-1::after {
+    content: "";
+    inset: 0 0 auto auto;
+}
+
+.btn-1:hover::before,
+.btn-1:hover::after {
+    width: 50%;
+    background: #5B63B7;
+}
+
 
 /* model-3d */
 .model-3d {

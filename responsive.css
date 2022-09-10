@@ -136,6 +136,18 @@
         justify-content: center;
         padding-top: 1em;
     }
+
+    /* remove-hover */
+    .btn-1::before,
+    .btn-1::after {
+        display: none;
+    }
+
+    :is(.btn-1, .light-box-con, ol li a):hover {
+        color: currentColor;
+        border-color: currentColor;
+        background-color: var(--none);
+    }
 }
 
 @media (max-width:500px) {

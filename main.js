@@ -1,7 +1,7 @@
 AOS.init();
 
-// loading =======================
 window.addEventListener("load", () => {
+    // loading ======================
     const loading = document.querySelector(".loading");
     loading.style.cssText = "opacity:0; z-index:-1;";
 
