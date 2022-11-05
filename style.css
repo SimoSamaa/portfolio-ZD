@@ -699,7 +699,6 @@ section:not(#sec-skills) {
     }
 }
 
-/* allow-music */
 .allow-music {
     position: fixed;
     inset: 0;
@@ -717,11 +716,8 @@ section:not(#sec-skills) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* animation: simo 500ms ease forwards; */
     translate: 0 100%;
     opacity: 0;
-    /* display: none; */
-    /* -webkit-animation: simo 500ms ease forwards; */
 }
 
 @keyframes simo {

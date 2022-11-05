@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 /* project-section */
 
 .slider-container {
@@ -292,9 +291,7 @@
 .light-box__social-media::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    inset: -30px auto auto 50%;
+    inset: -28.8px auto auto 50%;
     background-color: transparent;
     border-width: 15px;
     border-style: solid;
