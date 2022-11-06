@@ -29,7 +29,7 @@
         top: 55%;
     }
 
-    .loading-model>div {
+    .loading-model > div {
         width: 40px;
         height: 40px;
     }
@@ -127,6 +127,12 @@
     #btn-right {
         right: -8px;
     }
+
+    :is(#btn-left, #btn-right) {
+        margin: 0;
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @media (max-width:640px) {
@@ -201,5 +207,9 @@
 
     .message-allow {
         text-align: center;
+    }
+
+    .slider-box:nth-child(5) {
+        background: url(img/mobile-img/p5.png) no-repeat center 20px/cover, var(--clt-gray-trans);
     }
 }

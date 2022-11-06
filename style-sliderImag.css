@@ -63,12 +63,10 @@
     border-right-width: 0;
 }
 
-@media (hover: hover) {
-    .slider-container:hover :is(#btn-left, #btn-right) {
-        margin: 0;
-        opacity: 1;
-        visibility: visible;
-    }
+.slider-container:hover :is(#btn-left, #btn-right) {
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .slider {
@@ -130,7 +128,7 @@
 .slider-box:nth-child(5),
 .slider-box:nth-child(11) {
     grid-row: 2/span 13;
-    background: url(img/mobile-img/p5.png) no-repeat center/cover, var(--clt-gray-trans);
+    background: url(img/mobile-img/p5.png) no-repeat 50% 100%/350%, var(--clt-gray-trans);
 }
 
 .slider-box:nth-child(6),
