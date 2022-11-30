@@ -292,9 +292,9 @@ function handleDarkmode(e) {
     favicon.href = null
 
     if (darkModeOn) {
-        favicon.href = '/fav icon/zd.svg';
+        favicon.href = './fav icon/zd.svg';
     } else {
-        favicon.href = '/fav icon/zd.svg';
+        favicon.href = './fav icon/zd.svg';
     }
 }
 
