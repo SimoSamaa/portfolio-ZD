@@ -13,7 +13,7 @@ function allowMusicBackground() {
     }
 };
 
-window.addEventListener("load", () => {
+function mainContent() {
     document.querySelector(".message-allow").style.cssText
         = "animation: simo 500ms ease forwards;";
 
@@ -281,7 +281,14 @@ window.addEventListener("load", () => {
             });
         });
     });
+};
+
+window.removeEventListener("load", document.querySelector(".loading-model"));
+
+window.addEventListener("load", () => {
+    mainContent();
 });
+
 
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -292,14 +299,15 @@ function handleDarkmode(e) {
     favicon.href = null
 
     if (darkModeOn) {
-        favicon.href = './fav icon/zd.svg';
+        favicon.href = './fav icon/zd_dark.svg';
     } else {
-        favicon.href = './fav icon/zd.svg';
+        favicon.href = './fav icon/zd_light.svg';
     }
 }
 
 handleDarkmode(darkModeMediaQuery);
 darkModeMediaQuery.addListener(handleDarkmode);
+
 
 // footer copyright years
 let year = document.querySelector(".year");
