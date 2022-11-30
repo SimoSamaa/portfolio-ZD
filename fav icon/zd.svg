@@ -1,0 +1,16 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429.82 447.19"><defs><style>
+
+svg {
+    fill: #000;
+    stroke: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    svg {
+        fill: #fff;
+        stroke: #fff;
+    }
+
+}
+.cls-1{font-size:315.16px;font-family:Impact;}.cls-2{fill:none;stroke-miterlimit:10;stroke-width:26px;}
+</style></defs><text class="cls-1" transform="translate(0 343.01) scale(1.1 1)"><tspan xml:space="preserve"> Zd</tspan></text><rect class="cls-2" x="20.45" y="13" width="396.38" height="401.27" rx="71"/></svg>
