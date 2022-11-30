@@ -69,10 +69,10 @@ function mainContent() {
     window.addEventListener("scroll", scrollSecion);
 
     // loading model-3D ============================================
-    setTimeout(() => {
-        document.querySelector(".loading-model").remove();
-        document.querySelector("model-viewer").style.opacity = "1";
-    }, 2500);
+//     setTimeout(() => {
+//         document.querySelector(".loading-model").remove();
+//         document.querySelector("model-viewer").style.opacity = "1";
+//     }, 2500);
 
     // skills-couter && scroll  =======================================
     let counter = document.querySelectorAll(".counter");
@@ -283,7 +283,10 @@ function mainContent() {
     });
 };
 
-window.removeEventListener("load", document.querySelector(".loading-model"));
+setTimeout(() => {
+        document.querySelector(".loading-model").remove();
+        document.querySelector("model-viewer").style.opacity = "1";
+    }, 2500);
 
 window.addEventListener("load", () => {
     mainContent();
